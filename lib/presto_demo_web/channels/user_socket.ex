@@ -3,6 +3,7 @@ defmodule PrestoDemoWeb.UserSocket do
 
   ## Channels
   # channel "room:*", PrestoDemoWeb.RoomChannel
+  channel("page:*", PrestoDemoWeb.PageChannel)
 
   ## Transports
   transport(:websocket, Phoenix.Transports.WebSocket)
@@ -19,8 +20,14 @@ defmodule PrestoDemoWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  def connect(_params, socket) do
-    {:ok, socket}
+  def connect(%{"token" => token} = _params, socket) do
+    case PrestoDemoWeb.Session.decode_socket_token(token) do
+      {:ok, visitor_id} ->
+	{:ok, assign(socket, :visitor_id, visitor_id)}
+
+      {:error, reason} ->
+	:error
+    end
   end
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
