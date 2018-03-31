@@ -11,7 +11,7 @@ defmodule PrestoDemo.Application do
       # Start the Ecto repository
       supervisor(PrestoDemo.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(PrestoDemoWeb.Endpoint, []),
+      supervisor(PrestoDemoWeb.Endpoint, [])
       # Start your own worker by calling: PrestoDemo.Worker.start_link(arg1, arg2, arg3)
       # worker(PrestoDemo.Worker, [arg1, arg2, arg3]),
     ]
