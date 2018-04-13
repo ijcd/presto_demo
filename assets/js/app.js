@@ -19,3 +19,18 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 import {socket, channel} from "./socket"
+
+//////////////////////////////////
+// Setup UIKit
+//////////////////////////////////
+
+uikit.use(icons);
+
+
+//////////////////////////////////
+// Setup Presto
+//////////////////////////////////
+
+import {Presto} from "./presto.js"
+import unpoly from "unpoly/dist/unpoly.js"
+let presto = new Presto(channel, unpoly);

@@ -3,13 +3,28 @@ defmodule PrestoDemoWeb.PageChannel do
 
   # TODO: turn these into a use macro that pulls this into the channel easily
   def join("page:lobby", payload, socket) do
-    %{visitor_id: visitor_id} = socket.assigns
+    # %{visitor_id: visitor_id} = socket.assigns
 
     if authorized?(payload) do
       {:ok, socket}
     else
       {:error, %{reason: "unauthorized"}}
     end
+  end
+
+  # TODO: turn these into a use macro that pulls this into the channel easily
+  def handle_in("presto", payload, socket) do
+    %{visitor_id: visitor_id} = socket.assigns
+
+    # send event to presto page
+    {:ok, dispatch} = Presto.dispatch(PrestoDemoWeb.Presto.Root, visitor_id, payload)
+
+    case dispatch do
+      [] -> nil
+      _ -> push(socket, "presto", dispatch)
+    end
+
+    {:reply, {:ok, payload}, socket}
   end
 
   # Add authorization logic here as required.

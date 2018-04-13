@@ -23,10 +23,10 @@ defmodule PrestoDemoWeb.UserSocket do
   def connect(%{"token" => token} = _params, socket) do
     case PrestoDemoWeb.Session.decode_socket_token(token) do
       {:ok, visitor_id} ->
-	{:ok, assign(socket, :visitor_id, visitor_id)}
+        {:ok, assign(socket, :visitor_id, visitor_id)}
 
-      {:error, reason} ->
-	:error
+      {:error, _reason} ->
+        :error
     end
   end
 

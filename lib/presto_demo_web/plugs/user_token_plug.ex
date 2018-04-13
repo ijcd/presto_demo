@@ -1,8 +1,6 @@
 defmodule PrestoDemoWeb.Plugs.UserTokenPlug do
   import Plug.Conn
 
-  @key :user_token
-
   def init(default), do: default
 
   def call(conn, _default) do
