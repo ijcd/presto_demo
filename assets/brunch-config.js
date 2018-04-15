@@ -47,6 +47,17 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/vendor/]
+    },
+    replacement: {
+      replacements: [{
+        files: [/\.js$/],
+	match: {find: /(?!_)\b(require)(?!_|d)/gm, replace: 'MY_REQUIRE'}
+      }]
+    },
+    sass: {
+      options: {
+        includePaths: ["node_modules"]
+      }
     }
   },
 
@@ -57,6 +68,15 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
+    globals: {
+      $: "jquery",
+      jQuery: "jquery",
+      uikit: "uikit",
+      icons: "uikit/dist/js/uikit-icons",
+    },
+    styles: {
+      unpoly: ["dist/unpoly.css"],
+    }
   }
 };
