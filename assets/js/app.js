@@ -31,6 +31,6 @@ uikit.use(icons);
 // Setup Presto
 //////////////////////////////////
 
-import {Presto} from "./presto.js"
+import {Presto} from "presto"
 import unpoly from "unpoly/dist/unpoly.js"
 let presto = new Presto(channel, up);
