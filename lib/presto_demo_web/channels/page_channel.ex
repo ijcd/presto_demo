@@ -17,7 +17,7 @@ defmodule PrestoDemoWeb.PageChannel do
     %{visitor_id: visitor_id} = socket.assigns
 
     # send event to presto page
-    {:ok, dispatch} = Presto.dispatch(PrestoDemoWeb.Presto.Root, visitor_id, payload)
+    {:ok, dispatch} = Presto.dispatch(PrestoDemoWeb.Presto.SingleCounter, visitor_id, payload)
 
     case dispatch do
       [] -> nil

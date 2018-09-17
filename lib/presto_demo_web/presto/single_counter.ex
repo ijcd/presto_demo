@@ -1,4 +1,4 @@
-defmodule PrestoDemoWeb.Presto.RootSingleCounter do
+defmodule PrestoDemoWeb.Presto.SingleCounter do
   use Presto.Page
   use Taggart.HTML
   require Logger
@@ -10,24 +10,18 @@ defmodule PrestoDemoWeb.Presto.RootSingleCounter do
 
   @impl Presto.Page
   def update(message, model) do
-    IO.inspect(message, label: "MESSAGE")
-
     case message do
       %{"event" => "click", "id" => "inc"} ->
         model + 1
 
       %{"event" => "click", "id" => "dec"} ->
         model - 1
-
-      _ ->
-        Logger.warn("Unknown message: #{inspect(message)}")
-        model
     end
   end
 
   @impl Presto.Page
   def render(model) do
-    div(class: "presto-component", id: "presto-component-12345") do
+    div do
       "Counter is: #{inspect(model)}"
 
       button(id: "inc", class: "presto-click") do
