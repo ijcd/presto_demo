@@ -72,8 +72,8 @@ exports.config = {
     globals: {
       $: "jquery",
       jQuery: "jquery",
-      uikit: "uikit",
-      icons: "uikit/dist/js/uikit-icons",
+      // uikit: "uikit",
+      // icons: "uikit/dist/js/uikit-icons",
     },
     styles: {
       unpoly: ["dist/unpoly.css"],

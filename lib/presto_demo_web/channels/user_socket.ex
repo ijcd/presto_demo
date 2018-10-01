@@ -3,7 +3,7 @@ defmodule PrestoDemoWeb.UserSocket do
 
   ## Channels
   # channel "room:*", PrestoDemoWeb.RoomChannel
-  channel("page:*", PrestoDemoWeb.PageChannel)
+  channel("presto:*", PrestoDemoWeb.PrestoChannel)
 
   ## Transports
   transport(:websocket, Phoenix.Transports.WebSocket)

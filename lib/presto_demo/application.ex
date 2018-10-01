@@ -14,8 +14,8 @@ defmodule PrestoDemo.Application do
       # worker(PrestoDemo.Worker, [arg1, arg2, arg3]),
 
       # TODO: remove when presto no longer symlinked
-      # {Registry, keys: :unique, name: Presto.PageRegistry},
-      # {Presto.PageSupervisor, []}
+      # {Registry, keys: :unique, name: Presto.ComponentRegistry},
+      # {Presto.ComponentSupervisor, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

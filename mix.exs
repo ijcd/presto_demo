@@ -42,9 +42,10 @@ defmodule PrestoDemo.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       # presto
-      {:presto, "~> 0.1.2"},
-      {:taggart, "~> 0.1.5"},
-      {:uikit, "~> 0.1"},
+      {:presto, path: "~/work/presto/presto"}
+      # {:presto, "~> 0.1.2"},
+      # {:taggart, "~> 0.1.5"},
+      # {:uikit, "~> 0.1"},
       # lenses
       # {:focus, "~> 0.3.5"},
       # {:lens, "~> 0.6.0"}

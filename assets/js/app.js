@@ -21,16 +21,9 @@ import "phoenix_html"
 import {socket, channel} from "./socket"
 
 //////////////////////////////////
-// Setup UIKit
-//////////////////////////////////
-
-uikit.use(icons);
-
-
-//////////////////////////////////
 // Setup Presto
 //////////////////////////////////
 
-import {Presto} from "presto"
+import {Presto} from "./presto"
 import unpoly from "unpoly/dist/unpoly.js"
 let presto = new Presto(channel, up);

@@ -1,4 +1,3 @@
-<%= Presto.component(PrestoDemoWeb.Presto.SingleCounter, assigns[:visitor_id]) %>
-<!-- <hr>
-<%= Presto.component(PrestoDemoWeb.Presto.Root, assigns[:visitor_id] <> "root") %>
-<hr> -->
+<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>
+<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>
+<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>

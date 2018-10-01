@@ -1,6 +1,6 @@
 defmodule PrestoDemoWeb.Presto.Root do
-  use Presto.Page
-  use Taggart.HTML
+  use Presto.Component
+  use Phoenix.HTML
   require Logger
 
   defmodule Model do
@@ -18,12 +18,12 @@ defmodule PrestoDemoWeb.Presto.Root do
     {:ok, state}
   end
 
-  @impl Presto.Page
+  @impl Presto.Component
   def initial_model(_model) do
     %Model{}
   end
 
-  @impl Presto.Page
+  @impl Presto.Component
   def update(message, model) do
     IO.inspect(message, label: "MESSAGE")
     model = %{model | last_message: message}
@@ -44,13 +44,15 @@ defmodule PrestoDemoWeb.Presto.Root do
     |> IO.inspect(label: "NEW MODEL")
   end
 
-  @impl Presto.Page
+  @impl Presto.Component
   def render(model) do
-    div do
-      render_slide(model.slide)
-      hr
-      inspect(model.last_message)
-    end
+    ~E"""
+    <div>
+      #{render_slide(model.slide)}
+      <hr>
+      #{inspect(model.last_message)}
+    </div>
+    """
   end
 
   def render_slide(1) do

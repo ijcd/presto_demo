@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body class="presto-keydown">
-    <!--
+
+  <!-- body class="presto-keydown" -->
+  <body>
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
     <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-    -->
 
-    <%= render @view_module, @view_template, Map.put(assigns, :layout, {PrestoDemoWeb.LayoutView, "nested.html"}) %>
+    <%= render @view_module, @view_template, assigns %>
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
