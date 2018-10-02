@@ -20,6 +20,9 @@ defmodule PrestoDemoWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
+
+    get("/example/:example", ExampleController, :show)
+
     # forward("/", Presto.Root)
   end
 

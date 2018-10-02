@@ -1,0 +1,2 @@
+<%= Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id) %>
+<%= Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id) %>

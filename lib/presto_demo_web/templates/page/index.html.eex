@@ -1,3 +1,0 @@
-<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>
-<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>
-<%= Presto.component(PrestoDemoWeb.Components.SingleCounter) %>
