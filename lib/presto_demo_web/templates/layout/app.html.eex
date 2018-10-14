@@ -18,7 +18,7 @@
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
     <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-    <%= for example <- [:single_counter, :multiple_counters, :same_counter] do %>
+    <%= for example <- [:single_counter, :multiple_counters, :same_counter, :counter_list] do %>
       <%= link(example, to: example_path(@conn, :show, example)) %>
       <br>
     <% end %>
