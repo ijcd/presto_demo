@@ -11,10 +11,10 @@ defmodule PrestoDemoWeb.Components.SingleCounter do
   @impl Presto.Component
   def update(message, model) do
     case message do
-      %{"event" => "click", "id" => "inc"} ->
+      %{"type" => "click", "id" => "inc"} ->
         model + 1
 
-      %{"event" => "click", "id" => "dec"} ->
+      %{"type" => "click", "id" => "dec"} ->
         model - 1
 
       _ -> model

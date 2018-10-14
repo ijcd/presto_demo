@@ -25,5 +25,7 @@ import {socket, channel} from "./socket"
 //////////////////////////////////
 
 import {Presto} from "./presto"
-import unpoly from "unpoly/dist/unpoly.js"
-let presto = new Presto(channel, up);
+
+var presto = new Presto();
+presto.bindEvents();
+presto.bindChannel(channel);
