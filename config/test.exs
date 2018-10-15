@@ -8,6 +8,10 @@ config :presto_demo, PrestoDemoWeb.Endpoint,
 
 config :presto_demo, :sql_sandbox, true
 
+config :wallaby,
+  driver: Wallaby.Experimental.Chrome,
+  screenshot_on_failure: true
+
 # Print only warnings and errors during test
 config :logger, level: :warn
 

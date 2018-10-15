@@ -41,9 +41,14 @@ defmodule PrestoDemo.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      # presto
+
+      # PRESTO
       {:presto, path: "~/work/presto/presto"},
-      {:wallaby, "~> 0.20.0", [runtime: false, only: :test]}
+
+      ## TEST ONLY
+      {:wallaby, "~> 0.20.0", [runtime: false, only: :test]},
+      {:exexec, "~> 0.1.0", [runtime: false, only: :test]},
+      {:retry, "~> 0.10.0", [runtime: false, only: :test]},
     ]
   end
 

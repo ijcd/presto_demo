@@ -25,7 +25,7 @@ defmodule PrestoDemoWeb.Components.SingleCounter do
   def render(model) do
     ~E"""
     <div>
-      Counter is: <%= inspect(model) %>
+      <span id="counter">Counter is: <%= inspect(model) %></span>
       <button id="inc" class="presto-click">More</button>
       <button id="dec" class="presto-click">Less</button>
     </div>

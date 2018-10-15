@@ -1,2 +1,2 @@
-<%= Presto.render(Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id)) %>
-<%= Presto.render(Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id)) %>
+<div id="one"><%= Presto.render(Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id)) %></div>
+<div id="two"><%= Presto.render(Presto.component(PrestoDemoWeb.Components.SingleCounter, @visitor_id)) %></div>

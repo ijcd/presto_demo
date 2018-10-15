@@ -25,8 +25,8 @@ defmodule PrestoDemoWeb.Components.CounterList do
   def render(model) do
     ~E"""
     <div>
-      <%= for c <- model do %>
-      <%= Presto.render(c) %>
+      <%= for {c, i} <- Enum.with_index(model) do %>
+      <span id="c<%= i+1 %>"><%= Presto.render(c) %></span>
       <% end %>
       <button id="add" class="presto-click">Add</button>
       <button id="remove" class="presto-click">Remove</button>
