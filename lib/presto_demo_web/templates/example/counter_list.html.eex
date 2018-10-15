@@ -1,1 +1,1 @@
-<%= Presto.render(Presto.component(PrestoDemoWeb.Components.CounterList)) %>
+<%= Presto.render_component(CounterList) %>

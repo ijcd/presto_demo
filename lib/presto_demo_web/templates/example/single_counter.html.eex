@@ -1,1 +1,1 @@
-<%= Presto.render(Presto.component(PrestoDemoWeb.Components.SingleCounter)) %>
+<%= Presto.render_component(SingleCounter) %>

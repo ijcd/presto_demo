@@ -17,6 +17,12 @@ config :presto_demo, PrestoDemoWeb.Endpoint,
   pubsub: [name: PrestoDemo.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+
+# Configure presto
+config :presto,
+  secret_key_base: "u9UBa2iDpR42Joy+5ZRZ6BcmD4e6MbgYuwL3fp7MZ3hh5wMtd7y+kT3X1cuMbSUw",
+  component_base: PrestoDemoWeb.Components
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
